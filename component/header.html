@@ -1,0 +1,40 @@
+<header class="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
+  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="./home.html">
+      <h1 class="text-3xl font-bold text-blue-700">MedFinder</h1>
+    </a>
+
+    <!-- Desktop Menu -->
+    <nav class="hidden md:flex space-x-8 text-lg">
+      <a href="./home.html" class="hover:text-blue-600">Home</a>
+      <a href="./contact.html" class="hover:text-blue-600">Contact</a>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <div class="md:hidden">
+      <button id="menu-btn" class="text-blue-700 focus:outline-none">
+        <!-- Hamburger Icon -->
+        <svg
+          class="w-8 h-8"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          ></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu (hidden by default) -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white px-6 py-4 space-y-2">
+    <a href="./home.html" class="block hover:text-blue-600">Home</a>
+    <a href="./contact.html" class="block hover:text-blue-600">Contact</a>
+  </div>
+</header>

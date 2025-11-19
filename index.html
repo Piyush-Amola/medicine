@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GenMed Loader</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Animations -->
+    <style>
+      /* Keyframes */
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0) translateX(0);
+        }
+        50% {
+          transform: translateY(-20px) translateX(20px);
+        }
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      /* Add custom utilities */
+      @layer utilities {
+        .animate-float {
+          animation: float 6s ease-in-out infinite;
+        }
+        .animate-fadeIn {
+          animation: fadeIn 1.2s ease forwards;
+        }
+      }
+    </style>
+  </head>
+
+  <body
+    class="min-h-screen bg-gradient-to-br from-[#e0f2ff] to-[#f0f7ff] font-sans flex items-center justify-center relative overflow-hidden"
+  >
+    <!-- Background Shapes -->
+    <div
+      class="absolute w-[140px] h-[140px] sm:w-[200px] sm:h-[200px] bg-[#6a11cb] rounded-full opacity-20 top-[-40px] left-[-40px] animate-float"
+    ></div>
+
+    <div
+      class="absolute w-[220px] h-[220px] sm:w-[300px] sm:h-[300px] bg-[#2575fc] rounded-full opacity-20 bottom-[-80px] right-[-80px] animate-float"
+    ></div>
+
+    <div
+      class="absolute w-[120px] h-[120px] sm:w-[150px] sm:h-[150px] bg-[#00b4d8] rounded-full opacity-20 top-[25%] right-[5%] sm:right-[10%] animate-float"
+    ></div>
+
+    <!-- Content Container -->
+    <div
+      class="flex flex-col items-center text-center z-10 animate-fadeIn px-4"
+    >
+      <!-- Title -->
+      <h1
+        class="text-3xl sm:text-4xl font-bold text-[#023e8a] drop-shadow-sm leading-tight"
+      >
+        Welcome to <span class="text-[#0077b6]">GenMed</span>
+      </h1>
+
+      <!-- Tagline -->
+      <p class="text-base sm:text-lg text-[#0077b6] mt-2">
+        Innovating your health journey
+      </p>
+
+      <!-- Spinner -->
+      <div class="relative mt-10">
+        <div
+          class="w-12 h-12 sm:w-16 sm:h-16 border-4 border-blue-200 border-t-[#0077b6] rounded-full animate-spin shadow-md"
+        ></div>
+      </div>
+    </div>
+
+    <!-- Auto Redirect -->
+    <script>
+      setTimeout(() => {
+        window.location.href = "./component/home.html";
+      }, 3500);
+    </script>
+  </body>
+</html>
